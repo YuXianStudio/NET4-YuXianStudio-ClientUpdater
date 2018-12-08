@@ -15,7 +15,7 @@ namespace NET4_YuXianStudio_ClientUpdater
             if (File.Exists(version))
             {
                 Console.WriteLine("");
-                Console.WriteLine("Copyright © 2019 YuxianStudio Organization All Rights Reserved. 使用有问题请联系:yuxianstudio@gmail.com");
+                Console.WriteLine("Copyright © 2019 YuxianStudio. All Rights Reserved. 使用有问题请联系:yuxianstudio@gmail.com");
                 Console.WriteLine("");
                 Console.WriteLine("非常重要：请确保该程序在根目录下!!!");
                 Console.WriteLine("");
@@ -27,7 +27,7 @@ namespace NET4_YuXianStudio_ClientUpdater
             else
             {
                 Console.WriteLine("");
-                Console.WriteLine("Copyright © 2019 YuxianStudio Organization All Rights Reserved. 使用有问题请联系:yuxianstudio@gmail.com");
+                Console.WriteLine("Copyright © 2019 YuxianStudio. All Rights Reserved. 使用有问题请联系:yuxianstudio@gmail.com");
                 Console.WriteLine("");
                 Console.WriteLine("非常重要：请确保该程序在根目录下!!!");
                 Console.WriteLine("");
