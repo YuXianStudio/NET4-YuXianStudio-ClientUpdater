@@ -11,14 +11,18 @@ namespace NET4_YuXianStudio_ClientUpdater
     {
         static void Main(string[] args)
         {
-            string version = ".minecraft/versions/3.1.3.clientversion";//判断客户端版本
-            if (File.Exists(version))
+            //枚举客户端版本
+            string LatestVersion = ".minecraft/versions/3.1.3.clientversion";
+            string PreviousVersion = ".minecraft/versions/3.1.2.clientversion";
+            string OlderVersion = ".minecraft/versions/3.1.1.clientversion";
+            //END
+            Console.WriteLine("");
+            Console.WriteLine("Copyright © 2019 YuxianStudio. All Rights Reserved. 使用有问题请联系:yuxianstudio@gmail.com");
+            Console.WriteLine("");
+            Console.WriteLine("非常重要：请确保该程序在根目录下!!!");
+            Console.WriteLine("");
+            if (File.Exists(LatestVersion))//判断客户端版本
             {
-                Console.WriteLine("");
-                Console.WriteLine("Copyright © 2019 YuxianStudio Organization All Rights Reserved. 使用有问题请联系:yuxianstudio@gmail.com");
-                Console.WriteLine("");
-                Console.WriteLine("非常重要：请确保该程序在根目录下!!!");
-                Console.WriteLine("");
                 Console.WriteLine("检测到客户端已经是最新版本，无需更新");
                 Console.WriteLine("");
                 Console.WriteLine("若客户端无法启动，请前往官网 https://mc.yuxianstudio.com 下载最新版本");
@@ -26,11 +30,6 @@ namespace NET4_YuXianStudio_ClientUpdater
             }
             else
             {
-                Console.WriteLine("");
-                Console.WriteLine("Copyright © 2019 YuxianStudio Organization All Rights Reserved. 使用有问题请联系:yuxianstudio@gmail.com");
-                Console.WriteLine("");
-                Console.WriteLine("非常重要：请确保该程序在根目录下!!!");
-                Console.WriteLine("");
                 Console.WriteLine("检测到客户端有新版本，是否更新?");
                 Console.WriteLine("");
                 Console.WriteLine("若更新，请按“回车”继续");
@@ -38,32 +37,79 @@ namespace NET4_YuXianStudio_ClientUpdater
                 Console.ReadLine();
                 Console.WriteLine("开始更新！");
                 Console.WriteLine("");
-                //删除旧版本Mod
-                string DeMod1 = @".minecraft/mods/test.jar";
-                File.Delete(DeMod1);
-                string DeMod2 = @".minecraft/mods/test.jar";
-                File.Delete(DeMod2);
-                //更新客户端Mod
-                Console.WriteLine("开始更新test.jar！");
-                WebClient webClient1 = new WebClient();
-                webClient1.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
-                Console.WriteLine("更新.jar完成!");
-                Console.WriteLine("开始更新.jar！");
-                WebClient webClient2 = new WebClient();
-                webClient2.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
-                Console.WriteLine("更新.jar完成!");
-                Console.WriteLine("开始更新.jar！");
-                WebClient webClient3 = new WebClient();
-                webClient3.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
-                Console.WriteLine("更新.jar完成!");
-                //更新客户端版本号
-                WebClient webClient233 = new WebClient();
-                webClient233.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/3.1.3.clientversion", ".minecraft/versions/3.1.3.clientversion");
-                Console.WriteLine("更新客户端版本号完成!");
-                Console.WriteLine("");
-                Console.WriteLine("更新客户端完成!");
-                Console.WriteLine("请按“回车”关闭窗口");
-                Console.ReadLine();
+                if (File.Exists(PreviousVersion))//判断客户端版本
+                {
+                    //删除旧版本Mod
+                    string DeMod1 = @".minecraft/mods/test.jar";
+                    File.Delete(DeMod1);//写法一
+
+                    File.Delete(@".minecraft/mods/test.jar");//写法二
+                    //END
+
+                    //更新客户端Mod
+                    WebClient webClient = new WebClient();
+                    Console.WriteLine("开始更新test.jar！");
+                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
+                    Console.WriteLine("更新.jar完成!");
+                    //
+                    Console.WriteLine("开始更新.jar！");
+                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
+                    Console.WriteLine("更新.jar完成!");
+                    //
+                    Console.WriteLine("开始更新.jar！");
+                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
+                    Console.WriteLine("更新.jar完成!");
+                    //END
+
+                    //更新客户端版本号
+                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/3.1.3.clientversion", ".minecraft/versions/3.1.3.clientversion");
+                    Console.WriteLine("更新客户端版本号完成!");
+                    File.Delete(@".minecraft/versions/3.1.2.clientversion");
+                    Console.WriteLine("");
+                    Console.WriteLine("更新客户端完成!");
+                    Console.WriteLine("请按“回车”关闭窗口");
+                    Console.ReadLine();
+                }
+                if (File.Exists(OlderVersion))//判断客户端版本
+                {
+                    //删除旧版本Mod
+                    string DeMod1 = @".minecraft/mods/test.jar";
+                    File.Delete(DeMod1);//写法一
+
+                    File.Delete(@".minecraft/mods/test.jar");//写法二
+                    //END
+
+                    //更新客户端Mod
+                    WebClient webClient = new WebClient();
+                    Console.WriteLine("开始更新test.jar！");
+                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
+                    Console.WriteLine("更新.jar完成!");
+                    //
+                    Console.WriteLine("开始更新.jar！");
+                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
+                    Console.WriteLine("更新.jar完成!");
+                    //
+                    Console.WriteLine("开始更新.jar！");
+                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
+                    Console.WriteLine("更新.jar完成!");
+                    //END
+
+                    //更新客户端版本号
+                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/3.1.3.clientversion", ".minecraft/versions/3.1.3.clientversion");
+                    Console.WriteLine("更新客户端版本号完成!");
+                    File.Delete(@".minecraft/versions/3.1.1.clientversion");
+                    Console.WriteLine("");
+                    Console.WriteLine("更新客户端完成!");
+                    Console.WriteLine("请按“回车”关闭窗口");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("检测到客户端版本过旧，请前往官网 https://mc.yuxianstudio.com 下载最新版本");
+                    Console.WriteLine("");
+                    Console.WriteLine("请按“回车”关闭窗口");
+                    Console.ReadLine();
+                }
             }
         }
     }

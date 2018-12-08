@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("NET4-YuXianStudio-ClientUpdater")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("YuXianStudio Inc.")]
+[assembly: AssemblyCompany("YuXianStudio Co.,Ltd.")]
 [assembly: AssemblyProduct("NET4-YuXianStudio-ClientUpdater")]
-[assembly: AssemblyCopyright("Copyright ©  2018 YuXianStudio Inc.")]
+[assembly: AssemblyCopyright("Copyright ©  2018 YuXianStudio Co.,Ltd.")]
 [assembly: AssemblyTrademark("YuXianStudio")]
 [assembly: AssemblyCulture("")]
 
