@@ -17,7 +17,7 @@ namespace NET4_YuXianStudio_ClientUpdater
             string OlderVersion = ".minecraft/versions/3.1.1.clientversion";
             //END
             Console.WriteLine("");
-            Console.WriteLine("Copyright © 2019 YuxianStudio. All Rights Reserved. 使用有问题请联系:yuxianstudio@gmail.com");
+            Console.WriteLine("Copyright © 2020 YuxianStudio. All Rights Reserved. 使用有问题请联系:yuxianstudio@gmail.com");
             Console.WriteLine("");
             Console.WriteLine("非常重要：请确保该程序在根目录下!!!");
             Console.WriteLine("");
@@ -49,20 +49,20 @@ namespace NET4_YuXianStudio_ClientUpdater
                     //更新客户端Mod
                     WebClient webClient = new WebClient();
                     Console.WriteLine("开始更新test.jar！");
-                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
+                    webClient.DownloadFile("https://mc.yuxianstudio.com/mods/test.jar", ".minecraft/mods/.jar");
                     Console.WriteLine("更新.jar完成!");
                     //
                     Console.WriteLine("开始更新.jar！");
-                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
+                    webClient.DownloadFile("https://mc.yuxianstudio.com/mods/test.jar", ".minecraft/mods/.jar");
                     Console.WriteLine("更新.jar完成!");
                     //
                     Console.WriteLine("开始更新.jar！");
-                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
+                    webClient.DownloadFile("https://mc.yuxianstudio.com/mods/test.jar", ".minecraft/mods/.jar");
                     Console.WriteLine("更新.jar完成!");
                     //END
 
                     //更新客户端版本号
-                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/3.1.3.clientversion", ".minecraft/versions/3.1.3.clientversion");
+                    webClient.DownloadFile("https://mc.yuxianstudio.com/3.1.3.clientversion", ".minecraft/versions/3.1.3.clientversion");
                     Console.WriteLine("更新客户端版本号完成!");
                     File.Delete(@".minecraft/versions/3.1.2.clientversion");
                     Console.WriteLine("");
@@ -82,20 +82,20 @@ namespace NET4_YuXianStudio_ClientUpdater
                     //更新客户端Mod
                     WebClient webClient = new WebClient();
                     Console.WriteLine("开始更新test.jar！");
-                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
+                    webClient.DownloadFile("https://mc.yuxianstudio.com/mods/test.jar", ".minecraft/mods/.jar");
                     Console.WriteLine("更新.jar完成!");
                     //
                     Console.WriteLine("开始更新.jar！");
-                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
+                    webClient.DownloadFile("https://mc.yuxianstudio.com/mods/test.jar", ".minecraft/mods/.jar");
                     Console.WriteLine("更新.jar完成!");
                     //
                     Console.WriteLine("开始更新.jar！");
-                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/mods/test.jar", ".minecraft/mods/.jar");
+                    webClient.DownloadFile("https://mc.yuxianstudio.com/mods/test.jar", ".minecraft/mods/.jar");
                     Console.WriteLine("更新.jar完成!");
                     //END
 
                     //更新客户端版本号
-                    webClient.DownloadFile("https://yuxstudio-minecraft-1252460563.cos.ap-guangzhou.myqcloud.com/3.1.3.clientversion", ".minecraft/versions/3.1.3.clientversion");
+                    webClient.DownloadFile("https://mc.yuxianstudio.com/3.1.3.clientversion", ".minecraft/versions/3.1.3.clientversion");
                     Console.WriteLine("更新客户端版本号完成!");
                     File.Delete(@".minecraft/versions/3.1.1.clientversion");
                     Console.WriteLine("");

@@ -8,10 +8,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("NET4-YuXianStudio-ClientUpdater")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("YuXianStudio Co.,Ltd.")]
-[assembly: AssemblyProduct("NET4-YuXianStudio-ClientUpdater")]
-[assembly: AssemblyCopyright("Copyright ©  2018 YuXianStudio Co.,Ltd.")]
-[assembly: AssemblyTrademark("YuXianStudio")]
+[assembly: AssemblyCompany("YuXianStudio")]
+[assembly: AssemblyProduct("")]
+[assembly: AssemblyCopyright("Copyright ©  2020 YuXianStudio")]
+[assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 会使此程序集中的类型
